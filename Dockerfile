@@ -1,5 +1,5 @@
-FROM alpine
-MAINTAINER tcely <tcely@users.noreply.github.com>
+FROM alpine:3.7
+LABEL maintainer="https://keybase.io/tcely"
 
 RUN apk --update add \
       python \
