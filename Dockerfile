@@ -1,9 +1,10 @@
-FROM alpine
+FROM alpine:3.8
 LABEL maintainer="https://keybase.io/tcely"
 
 RUN apk --update add \
-      python \
-      py-requests py-yaml && \
+      python docker-py \
+      py2-backports.ssl_match_hostname \
+      py-ipaddress py-requests py-yaml && \
     apk add --virtual build-deps \
       git py2-pip && \
     git clone --recurse-submodules --single-branch 'https://github.com/HariSekhon/pytools.git' /pytools ; \
