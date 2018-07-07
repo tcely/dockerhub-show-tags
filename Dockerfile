@@ -10,4 +10,6 @@ RUN apk --update add \
     apk del --purge .build-pytools ; \
     rm -rf /var/cache/apk/*
 
+RUN /pytools/dockerhub_show_tags.py alpine
+
 ENTRYPOINT ["/pytools/dockerhub_show_tags.py"]
