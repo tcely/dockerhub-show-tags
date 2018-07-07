@@ -8,8 +8,7 @@ RUN apk --update add \
     git clone --recurse-submodules --single-branch 'https://github.com/HariSekhon/pytools.git' /pytools ; \
     pip install beautifulsoup4 blessings docker ; \
     apk del --purge .build-pytools ; \
-    rm -rf /var/cache/apk/*
-
-RUN /pytools/dockerhub_show_tags.py alpine
+    rm -rf /var/cache/apk/* ; \
+    /pytools/dockerhub_show_tags.py alpine
 
 ENTRYPOINT ["/pytools/dockerhub_show_tags.py"]
