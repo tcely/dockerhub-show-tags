@@ -2,7 +2,7 @@ FROM alpine:3.9
 LABEL maintainer="https://keybase.io/tcely"
 
 RUN apk --update add \
-      python2 py2-yaml && \
+      python2 py2-cffi py2-yaml && \
     apk add --virtual .build-pytools \
       build-base git py2-pip python2-dev && \
     git clone --recurse-submodules --single-branch 'https://github.com/HariSekhon/pytools.git' /pytools ; \
