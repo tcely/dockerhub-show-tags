@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM tcely/alpine-stable
 LABEL maintainer="https://keybase.io/tcely"
 
 RUN apk --update add \
